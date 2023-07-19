@@ -1,0 +1,58 @@
+#:import utils kivy.utils
+<mygrid>:
+    orientation: 'vertical'
+    padding: 40
+    spacing: 30
+    city: city
+    Label:
+        text: 'Iran`s Weather'
+        color: utils.get_color_from_hex('#15ff07')
+        font_size: 30
+    TextInput:
+        id: city
+        multiline: False
+        size_hint_y: 0.25
+        font_family: 'Comic'
+    Button:
+        text: 'Search'
+        background_color: utils.get_color_from_hex('#FFFF00')
+        size_hint_y: 0.5
+        on_press: root.btn()
+    GridLayout:
+        cols: 2
+        Label:
+            text: 'Temperature:'
+        Label:
+            id: temperature_label
+            text: root.temperature
+        Label:
+            text: 'Air Pressure:'
+        Label:
+            id: air_pressure_label
+            text: root.air_pressure
+        Label:
+            text: 'Moisture Percentage:'
+        Label:
+            id: moisture_label
+            text: root.moisture_percentage
+        Label:
+            text: 'Wind Speed:'
+        Label:
+            id: wind_speed_label
+            text: root.wind_speed
+        Label:
+            text: 'Wind Direction:'
+        Label:
+            id: wind_direction_label
+            text: root.wind_direction
+        Label:
+            text: 'Emotional Temperature:'
+        Label:
+            id: emotional_temperature_label
+            text: root.emotional_temperature
+        Label:
+            text: 'Weather Description:'
+        Label:
+            id: weather_desc_label
+            text: root.weather_description
+                                
